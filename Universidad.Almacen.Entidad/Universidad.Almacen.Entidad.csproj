@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9F55A35-9040-4C4D-8443-FC3E914B5C6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Universidad.Almacen.Entidad</RootNamespace>
+    <AssemblyName>Universidad.Almacen.Entidad</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\AuditableEntity.cs" />
+    <Compile Include="Base\EntityBase.cs" />
+    <Compile Include="Entities\EAlmacen.cs" />
+    <Compile Include="Entities\EAlmacenVirtual.cs" />
+    <Compile Include="Entities\EArticulo.cs" />
+    <Compile Include="Entities\ECategoria.cs" />
+    <Compile Include="Entities\EFacultad.cs" />
+    <Compile Include="Entities\EIngreso.cs" />
+    <Compile Include="Entities\EIngresoDetalle.cs" />
+    <Compile Include="Entities\EInventario.cs" />
+    <Compile Include="Entities\EInventarioAjuste.cs" />
+    <Compile Include="Entities\EInventarioDetalle.cs" />
+    <Compile Include="Entities\ELote.cs" />
+    <Compile Include="Entities\EMovimientoInventario.cs" />
+    <Compile Include="Entities\EPersona.cs" />
+    <Compile Include="Entities\EProveedor.cs" />
+    <Compile Include="Entities\ERequerimiento.cs" />
+    <Compile Include="Entities\ERequerimientoDetalle.cs" />
+    <Compile Include="Entities\ESalida.cs" />
+    <Compile Include="Entities\ESalidaDetalle.cs" />
+    <Compile Include="Entities\ESede.cs" />
+    <Compile Include="Entities\EServicio.cs" />
+    <Compile Include="Entities\EStock.cs" />
+    <Compile Include="Entities\ETransferencia.cs" />
+    <Compile Include="Entities\ETransferenciaDetalle.cs" />
+    <Compile Include="Entities\EUbicacion.cs" />
+    <Compile Include="Entities\EUnidadMedida.cs" />
+    <Compile Include="Entities\EUnidadOrganica.cs" />
+    <Compile Include="Entities\EUsuario.cs" />
+    <Compile Include="Entities\ERol.cs" />
+    <Compile Include="Entities\EUsuarioRol.cs" />
+    <Compile Include="Enums\EstadoRequerimiento.cs" />
+    <Compile Include="Enums\TipoMovimiento.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
