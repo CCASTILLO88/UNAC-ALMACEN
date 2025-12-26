@@ -8,8 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
-using Universidad.Almacen.Negocio.Services;
+using System.Threading.Tasks; 
 using Universidad.Almacen.Entidad.Entities;
 using System.Windows.Forms;
 
@@ -17,7 +16,7 @@ namespace Universidad.Almacen.WinApp
 {
     public partial class Login : MaterialForm
     {
-        private readonly UsuarioRolService _usuarioRolService;
+        //private readonly UsuarioRolService _usuarioRolService;
         public Login()
         {
             InitializeComponent();
@@ -47,35 +46,7 @@ namespace Universidad.Almacen.WinApp
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string username = txt_usuario.Text.Trim();
-                string clave = txt_pass.Text;
-                
-                if (string.IsNullOrWhiteSpace(username))
-                {
-                    MessageBox.Show("Ingrese su usuario.", "Validación",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txt_usuario.Focus();
-                    return;
-                }
-
-                if (string.IsNullOrWhiteSpace(clave))
-                {
-                    MessageBox.Show("Ingrese su clave.", "Validación",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txt_pass.Focus();
-                    return;
-                }
-                var hassPass = ComputeHash(clave);
-                var result = _usuarioRolService.ValidarUsuario(username, hassPass);
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            
         }
     }
 }

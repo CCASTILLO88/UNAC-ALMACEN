@@ -126,10 +126,6 @@
       <Project>{b9f55a35-9040-4c4d-8443-fc3e914b5c6a}</Project>
       <Name>Universidad.Almacen.Entidad</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Universidad.Almacen.Negocio\Universidad.Almacen.Negocio.csproj">
-      <Project>{cb951fdd-293a-4e4d-9aef-fe2cd1b04d70}</Project>
-      <Name>Universidad.Almacen.Negocio</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Serilog.4.3.0\build\Serilog.targets" Condition="Exists('..\packages\Serilog.4.3.0\build\Serilog.targets')" />
